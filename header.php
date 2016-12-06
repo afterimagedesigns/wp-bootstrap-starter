@@ -17,12 +17,13 @@
 </head>
 
 <body <?php body_class(); ?>>
-<header id="site-header">
-		<nav class="navbar navbar navbar-inverse navbar-static-top" role="navigation">
-		  <div class="container">
+<header id="site-header" class="navbar navbar-static-top">
+		<div class="container">
+			
+		  
 		    <!-- Brand and toggle get grouped for better mobile display -->
 		    <div class="navbar-header">
-		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="navbar-collapsed">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 		        <span class="sr-only">Toggle navigation</span>
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
@@ -38,21 +39,30 @@
 		      </div>
 		    </div>
 
+		    <nav class="collapse navbar-collapse" role="navigation">
+
 		        <?php
 		            wp_nav_menu( array(
 		                'menu'              => 'primary',
 		                'theme_location'    => 'primary',
 		                'depth'             => 2,
-		                'container'         => 'div',
-		                'container_class'   => 'collapse navbar-collapse',
+		                'container'         => '',
+		                'container_class'   => '',
 		        		'container_id'      => 'navbar-collapsed',
-		                'menu_class'        => 'nav navbar-nav navbar-right',
+		                'menu_class'        => 'nav navbar-nav',
 		                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
 		                'walker'            => new wp_bootstrap_navwalker())
 		            );
 		        ?>
-		    </div>
-		</nav>
+		    	
+		    	<div class="col-sm-3 col-md-3 pull-right">
+		            <?php get_search_form(); ?>
+		        </div>
+			</nav>
+		</div>
 </header><!-- #masthead -->
+
+
+
 
 <div class="main-content">

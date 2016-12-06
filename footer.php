@@ -7,20 +7,18 @@
 
 </div><!-- close .main-content -->
 
-<footer id="site-footer">
-	<div class="container">
-		<div class="row">
-			<div class="site-footer-inner col-sm-12">
-				<div class="site-info">
-					<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'wp-bootstrap-starter' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'wp-bootstrap-starter' ), 'WordPress' ); ?></a>
-					<span class="sep"> | </span>
-                    <a class="credits" href="http://afterimagedesigns.com/" target="_blank" title="Theme developed by Afterimage Designs" alt="Theme developed by Afterimage Designs"><?php _e('Theme developed by Afterimage Designs','wp-bootstrap-starter') ?> </a>
-				</div><!-- close .site-info -->
-
-			</div>
-		</div>
-	</div><!-- close .container -->
-</footer><!-- close #colophon -->
+<footer class="bs-docs-footer"> 
+  <div class="container"> 
+    <ul class="bs-docs-footer-links"> 
+      <li><a href="https://github.com/twbs/bootstrap">GitHub</a></li> 
+      <li><a href="https://twitter.com/getbootstrap">Twitter</a></li> 
+      <li><a href="../getting-started/#examples">Examples</a></li> 
+      <li><a href="../about/">About</a></li> 
+    </ul> 
+    <p>Designed and built with all the love in the world by <a href="https://twitter.com/mdo" target="_blank">@mdo</a> and <a href="https://twitter.com/fat" target="_blank">@fat</a>. Maintained by the <a href="https://github.com/orgs/twbs/people">core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p> 
+    <p>Code licensed <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank" rel="license">MIT</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license">CC BY 3.0</a>.</p> 
+  </div> 
+  </footer>
 
 <?php wp_footer(); ?>
 

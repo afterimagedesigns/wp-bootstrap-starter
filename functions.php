@@ -9,8 +9,8 @@ if ( ! isset( $content_width ) ) {
 }
 
 
-if ( ! function_exists( 'ai_theme_setup' ) ) :
-function ai_theme_setup() {
+if ( ! function_exists( 'wp_bootstrap_starter_setup' ) ) :
+function wp_bootstrap_starter_setup() {
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -65,10 +65,16 @@ function ai_theme_setup() {
 	);
 	add_theme_support( 'custom-header', $args );
 
+	/**
+	 * Make theme available for translation
+	 * Translations can be filed in the /languages/ directory
+	*/
+	load_theme_textdomain( 'wp_bootstrap_starter', get_template_directory() . '/languages' );
+
 
 }
 endif;
-add_action( 'after_setup_theme', 'ai_theme_setup' );
+add_action( 'after_setup_theme', 'wp_bootstrap_starter_setup' );
 
 
 
@@ -76,7 +82,7 @@ add_action( 'after_setup_theme', 'ai_theme_setup' );
 /**
  * Enqueue scripts and styles
  */
-function ai_theme_scripts() {
+function wp_bootstrap_starter_scripts() {
 	// load bootstrap css
 	wp_enqueue_style( 'wp-bootstrap-starter-bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css' );
 	// load Font Awesome css
@@ -90,12 +96,12 @@ function ai_theme_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'ai_theme_scripts' );
+add_action( 'wp_enqueue_scripts', 'wp_bootstrap_starter_scripts' );
 
 /**
  * Register widgetized area and update sidebar with default widgets
  */
-function ai_widgets_init() {
+function wp_bootstrap_starter_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Sidebar', 'wp-bootstrap-starter' ),
 		'id'            => 'sidebar-1',
@@ -105,11 +111,17 @@ function ai_widgets_init() {
 		'after_title'   => '</h3>',
 		) );
 }
-add_action( 'widgets_init', 'ai_widgets_init' );
+add_action( 'widgets_init', 'wp_bootstrap_starter_widgets_init' );
 
 
 /**
  * Load custom WordPress nav walker.
  */
-require_once(get_template_directory().'/lib/wp_bootstrap_navwalker.php');
+require_once(get_template_directory().'/inc/wp_bootstrap_navwalker.php');
+
+/**
+ * Load Jetpack compatibility file.
+ */
+require get_template_directory() . '/inc/jetpack.php';
+
 
