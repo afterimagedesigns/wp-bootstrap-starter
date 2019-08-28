@@ -1,29 +1,37 @@
 <?php
 /**
- * Page Template - This template is used as the default template of the page
+ * The template for displaying 404 pages (not found)
  *
+ * @link https://codex.wordpress.org/Creating_an_Error_404_Page
+ *
+ * @package WP_Bootstrap_Starter
  */
+
 get_header(); ?>
-	<div class="container">
-		<div class="row">
-			<div id="content" class="main-content-inner col-sm-12 col-md-9">
-				<section class="content-padder error-404 not-found">
 
-					<header>
-						<h2 class="page-title"><?php _e( 'Oops! Something went wrong here.', 'wp-bootstrap-starter' ); ?></h2>
-					</header><!-- .page-header -->
+	<section id="primary" class="content-area col-sm-12 col-lg-8">
+		<main id="main" class="site-main" role="main">
 
-					<div class="page-content">
+			<section class="error-404 not-found">
+				<header class="page-header">
+					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'wp-bootstrap-starter' ); ?></h1>
+				</header><!-- .page-header -->
 
-						<p><?php _e( 'Nothing could be found at this location. Maybe try a search?', 'wp-bootstrap-starter' ); ?></p>
+				<div class="page-content">
+					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'wp-bootstrap-starter' ); ?></p>
 
-						<?php get_search_form(); ?>
+					<?php
+						get_search_form();
 
-					</div><!-- .page-content -->
 
-				</section><!-- .content-padder -->
-			</div>
-			<?php get_sidebar(); ?>
-		</div>
-	</div>
-<?php get_footer(); ?>
+					?>
+
+				</div><!-- .page-content -->
+			</section><!-- .error-404 -->
+
+		</main><!-- #main -->
+	</section><!-- #primary -->
+
+<?php
+get_sidebar();
+get_footer();

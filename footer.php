@@ -1,28 +1,33 @@
 <?php
 /**
- * Footer Template - Displays the Header of the website
+ * The template for displaying the footer
  *
+ * Contains the closing of the #content div and all content after.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package WP_Bootstrap_Starter
  */
+
 ?>
+<?php if(!is_page_template( 'blank-page.php' ) && !is_page_template( 'blank-page-with-container.php' )): ?>
+			</div><!-- .row -->
+		</div><!-- .container -->
+	</div><!-- #content -->
+    <?php get_template_part( 'footer-widget' ); ?>
+	<footer id="colophon" class="site-footer <?php echo wp_bootstrap_starter_bg_class(); ?>" role="contentinfo">
+		<div class="container pt-3 pb-3">
+            <div class="site-info">
+                &copy; <?php echo date('Y'); ?> <?php echo '<a href="'.home_url().'">'.get_bloginfo('name').'</a>'; ?>
+                <span class="sep"> | </span>
+                <a class="credits" href="https://afterimagedesigns.com/wp-bootstrap-starter/" target="_blank" title="WordPress Technical Support" alt="Bootstrap WordPress Theme"><?php echo esc_html__('Bootstrap WordPress Theme','wp-bootstrap-starter'); ?></a>
 
-</div><!-- close .main-content -->
-
-<footer id="site-footer">
-	<div class="container">
-		<div class="row">
-			<div class="site-footer-inner col-sm-12">
-				<div class="site-info">
-					<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'wp-bootstrap-starter' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'wp-bootstrap-starter' ), 'WordPress' ); ?></a>
-					<span class="sep"> | </span>
-                    <a class="credits" href="http://afterimagedesigns.com/" target="_blank" title="Theme developed by Afterimage Designs" alt="Theme developed by Afterimage Designs"><?php _e('Theme developed by Afterimage Designs','wp-bootstrap-starter') ?> </a>
-				</div><!-- close .site-info -->
-
-			</div>
+            </div><!-- close .site-info -->
 		</div>
-	</div><!-- close .container -->
-</footer><!-- close #colophon -->
+	</footer><!-- #colophon -->
+<?php endif; ?>
+</div><!-- #page -->
 
 <?php wp_footer(); ?>
-
 </body>
 </html>
