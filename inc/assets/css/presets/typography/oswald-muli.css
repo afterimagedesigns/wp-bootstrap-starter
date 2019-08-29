@@ -1,0 +1,1 @@
+h1, h2, h3, h4, h5, h6 {    font-family: 'Oswald', sans-serif;    text-transform: uppercase;}body {    font-family: 'Muli', sans-serif;}body p {    margin: 1em 0;}body a:hover {    transition: 0.3s ease-in;}.post-thumbnail {    margin-bottom: 1em;}

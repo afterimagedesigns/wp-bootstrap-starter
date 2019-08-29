@@ -1,0 +1,53 @@
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+}
+
+/* Headings
+--------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    margin: 0 0 20px;
+}
+
+.navbar-brand {
+    padding-top: 0.25rem;
+}
+.navbar-brand>a {
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+}
+#masthead .navbar-nav>li a {
+    border-bottom-width: 0;
+    display: block;
+    font-family: "Poppins", sans-serif;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+div#page-sub-header h1 {
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 0;
+    text-transform: none;
+}
+div#page-sub-header p {
+    max-width: 100%;
+}
+.page .entry-title, .single .entry-title, .blog .entry-title {
+    font-weight: 600;
+}
+#secondary .widget-title {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0 5px 0 0;
+    text-transform: uppercase;
+    margin-bottom: 1.563rem;
+}
+.entry-meta {
+    font-family: "Poppins", sans-serif;
+}
+
+.post-thumbnail {
+    margin-bottom: 1.875rem;
+}
