@@ -17,10 +17,7 @@ function themeslug_sanitize_checkbox( $checked ) {
 
 function wp_bootstrap_starter_customize_register( $wp_customize ) {
 
-
-
     //Style Preset
-
     $wp_customize->add_section(
         'typography',
         array(
@@ -29,6 +26,7 @@ function wp_bootstrap_starter_customize_register( $wp_customize ) {
             'priority' => 20,
         )
     );
+
     //Theme Option
     $wp_customize->add_setting( 'theme_option_setting', array(
         'default'   => 'default',
@@ -183,8 +181,6 @@ function wp_bootstrap_starter_customize_register( $wp_customize ) {
     ) ) );
 
 
-
-
     //Site Name Text Color
    $wp_customize->add_section(
         'site_name_text_color',
@@ -213,7 +209,41 @@ function wp_bootstrap_starter_customize_register( $wp_customize ) {
         )
     );
 
-
+    // Bootstrap and Fontawesome Option
+    $wp_customize->add_setting( 'boostrap_cdn_setting', array(
+        'default' => __( 'no','wp-bootstrap-starter' ),
+        'sanitize_callback' => 'wp_filter_nohtml_kses',
+    ) );
+    $wp_customize->add_control( 
+        'boostrap_cdn',
+        array(
+            'label' => __( 'Use Bootstrap CDN', 'wp-bootstrap-starter' ),
+            'section' => 'site_name_text_color',
+            'settings' => 'boostrap_cdn_setting',
+	        'type'    => 'select',
+	        'choices' => array(
+	            'yes' => __( 'Yes' ),
+	            'no' => __( 'No' ),
+        	)
+        )
+    );
+    $wp_customize->add_setting( 'fontawesome_cdn_setting', array(
+        'default' => __( 'no','wp-bootstrap-starter' ),
+        'sanitize_callback' => 'wp_filter_nohtml_kses',
+    ) );
+    $wp_customize->add_control( 
+        'fontawesome_cdn',
+        array(
+            'label' => __( 'Use Fontawesome CDN', 'wp-bootstrap-starter' ),
+            'section' => 'site_name_text_color',
+            'settings' => 'fontawesome_cdn_setting',
+            'type'    => 'select',
+            'choices' => array(
+                'yes' => __( 'Yes' ),
+                'no' => __( 'No' ),
+            )
+        )
+    );
 
 
     $wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
