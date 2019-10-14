@@ -210,38 +210,22 @@ function wp_bootstrap_starter_customize_register( $wp_customize ) {
     );
 
     // Bootstrap and Fontawesome Option
-    $wp_customize->add_setting( 'boostrap_cdn_setting', array(
+    $wp_customize->add_setting( 'cdn_assets_setting', array(
         'default' => __( 'no','wp-bootstrap-starter' ),
         'sanitize_callback' => 'wp_filter_nohtml_kses',
     ) );
     $wp_customize->add_control( 
-        'boostrap_cdn',
+        'cdn_assets',
         array(
-            'label' => __( 'Use Bootstrap CDN', 'wp-bootstrap-starter' ),
+            'label' => __( 'Use CDN for Assets', 'wp-bootstrap-starter' ),
+            'description' => __( 'All Bootstrap Assets and FontAwesome will be loaded in CDN.', 'wp-bootstrap-starter' ),
             'section' => 'site_name_text_color',
-            'settings' => 'boostrap_cdn_setting',
+            'settings' => 'cdn_assets_setting',
 	        'type'    => 'select',
 	        'choices' => array(
-	            'yes' => __( 'Yes' ),
-	            'no' => __( 'No' ),
+	            'yes' => __( 'Yes', 'wp-bootstrap-starter' ),
+	            'no' => __( 'No', 'wp-bootstrap-starter' ),
         	)
-        )
-    );
-    $wp_customize->add_setting( 'fontawesome_cdn_setting', array(
-        'default' => __( 'no','wp-bootstrap-starter' ),
-        'sanitize_callback' => 'wp_filter_nohtml_kses',
-    ) );
-    $wp_customize->add_control( 
-        'fontawesome_cdn',
-        array(
-            'label' => __( 'Use Fontawesome CDN', 'wp-bootstrap-starter' ),
-            'section' => 'site_name_text_color',
-            'settings' => 'fontawesome_cdn_setting',
-            'type'    => 'select',
-            'choices' => array(
-                'yes' => __( 'Yes' ),
-                'no' => __( 'No' ),
-            )
         )
     );
 
