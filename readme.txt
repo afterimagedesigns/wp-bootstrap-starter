@@ -58,6 +58,12 @@ WP Bootstrap Starter includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
+= 3.3.2 - October 08, 2019 =
+* Update the CDN feature on the theme customizer
+* Make the CDN option on the customizer to only one setting
+* Update the CDN link to jsDeliver
+* Add prefetch loading on the jsDeliver scripts and stylesheet
+
 = 3.3.1 - September 15, 2019 =
 * Add new feature on the theme customizer
 * Add an option on the theme customizer for the Bootstrap and Fontawesome to run on their respective CDN
