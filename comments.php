@@ -38,8 +38,8 @@ if ( post_password_required() ) {
             } else {
                 printf( // WPCS: XSS OK.
 					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $underscore_comment_count, 'comments title', 'wp-bootstrap-starter' ) ),
-					esc_html( number_format_i18n( $underscore_comment_count ) ),
+					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $comments_number, 'comments title', 'wp-bootstrap-starter' ) ),
+					esc_html( number_format_i18n( $comments_number ) ),
 					'<span>' . esc_html( get_the_title() ) . '</span>'
 				);
             }
