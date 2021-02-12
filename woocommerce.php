@@ -15,11 +15,11 @@
 get_header(); ?>
 
     <section id="primary" class="content-area col-sm-12 col-md-12 col-lg-8">
-        <main id="main" class="site-main" role="main">
+        <div id="main" class="site-main" role="main">
 
             <?php woocommerce_content(); ?>
 
-        </main><!-- #main -->
+        </div><!-- #main -->
     </section><!-- #primary -->
 
 <?php

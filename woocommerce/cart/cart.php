@@ -12,7 +12,7 @@
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @package WooCommerce/Templates
- * @version 3.7.0
+ * @version 3.8.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -30,7 +30,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 				<th class="product-name"><?php esc_html_e( 'Product', 'wp-bootstrap-starter' ); ?></th>
 				<th class="product-price"><?php esc_html_e( 'Price', 'wp-bootstrap-starter' ); ?></th>
 				<th class="product-quantity"><?php esc_html_e( 'Quantity', 'wp-bootstrap-starter' ); ?></th>
-				<th class="product-subtotal"><?php esc_html_e( 'Total', 'wp-bootstrap-starter' ); ?></th>
+				<th class="product-subtotal"><?php esc_html_e( 'Subtotal', 'wp-bootstrap-starter' ); ?></th>
 			</tr>
 		</thead>
 		<tbody>

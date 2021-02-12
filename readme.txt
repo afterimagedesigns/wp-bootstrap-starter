@@ -12,7 +12,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-The best WordPress starter theme based on the most powerful frameworks in the world: "_s" (by Automattic, the main people behind WordPress development), Twitter Bootstrap (the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web) and Font Awesome (or Fontawesome, a full suite of 675+ pictographic icons for easy scalable vector graphics on websites). This theme, like WordPress, is licensed under the GPL. You can use this theme as base for your next WordPress theme project and you are allowed to remove the link at the footer or do whatever you want. Your feedback on how we can continuously improve this WordPress Starter Theme Bootstrap will be highly appreciated. Page templates includes Right-sidebar (default page template), Left-Sidebar, Full-Width, Blank with container, Blank without container Page. Other features - Currently using Bootstrap v4.0.0-beta.2 , Widgetized footer area, WooCommerce ready, Compatible with Contact Form 7, Compatible with Visual Composer, Compatible with Elementor Page Builder. This theme will be an active project which we will update from time to time. Check this page regularly for the updates.
+The best WordPress starter theme based on the most powerful frameworks in the world: "_s" (by Automattic, the main people behind WordPress development), Twitter Bootstrap (the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web) and Font Awesome (or Fontawesome, a full suite of 675+ pictographic icons for easy scalable vector graphics on websites). This theme, like WordPress, is licensed under the GPL. You can use this theme as base for your next WordPress theme project and you are allowed to remove the link at the footer or do whatever you want. Your feedback on how we can continuously improve this WordPress Starter Theme Bootstrap will be highly appreciated. Page templates includes Right-sidebar (default page template), Left-Sidebar, Full-Width, Blank with container, Blank without container Page. Other features - Currently using Bootstrap v4.5.3 , Widgetized footer area, WooCommerce ready, Compatible with Contact Form 7, Compatible with Visual Composer, Compatible with Elementor Page Builder. This theme will be an active project which we will update from time to time. Check this page regularly for the updates.
 
 
 This theme, like WordPress, is licensed under the GPL. You can use this theme as base for your next WordPress theme project and you are allowed to remove the link at the footer or do whatever you want. Your feedback on how we can continuously improve this WordPress Starter Theme Bootstrap will be highly appreciated.
@@ -25,7 +25,7 @@ Page templates
 * Blank without container Page
 
 Other features:
-* Currently using Bootstrap v4.3.1
+* Currently using Bootstrap v4.5.3
 * Font Awesome integrated
 * Widgetized footer area
 * WooCommerce ready
@@ -54,9 +54,57 @@ WP Bootstrap Starter includes support for Infinite Scroll in Jetpack.
 * normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
 * Bootstrap http://getbootstrap.com, (C) 2011-2015 Twitter, Inc., [MIT] (https://github.com/twbs/bootstrap/blob/master/LICENSE)
 * WP Bootstrap Navwalker https://github.com/wp-bootstrap/wp-bootstrap-navwalker, [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html)
-* Font Awesome icons, Copyright (C) Dave Gandy License: SIL Open Font License, version 1.1. - http://fontawesome.io/
+* Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
 
 == Changelog ==
+
+= 3.4.7 - January 12, 2021 =
+* Improve the theme coding to follow WP Theme Requirements
+* Fix the issues under https://themes.trac.wordpress.org/ticket/92838
+* FontAwesome transferred to CDN, fixes the issue under GPL License
+* Improve escaping of texts, labels and placeholders
+* Apply proper sanitization functions on customizer.php
+* Apply unique prefixes on the functions 
+* Update the theme screenshot to meet the Theme Requirements
+* Fix the bugs and issues under https://github.com/afterimagedesigns/wp-bootstrap-starter/pull/6/commits/
+
+= 3.3.9 - January 12, 2021 =
+* Check the compatibility with Elementor and WP Bakery builder
+* Check the compatibility with WooCommerce
+* Update Readme.txt description
+
+= 3.3.8 - December 15, 2020 =
+* Update the theme js file to prevent shorthand script https://wordpress.org/support/topic/old-jquery/
+
+= 3.3.7 - December 15, 2020 =
+* Create a new option for the footer credit
+
+= 3.3.6 - October 30, 2020 =
+* Update Bootstrap to v4.5.3
+
+= 3.3.5 - October 13, 2020 =
+* FontAwesome issue fix https://wordpress.org/support/topic/font-awesome-broken-with-new-version-12-10-2020/
+
+= 3.3.4 - October 12, 2020 =
+* Update the stylesheet information
+* Remove old commented codes on the files
+* Add escape codes on customizer.php and header.php
+* Implement wp_body_open on the header 
+* Remove map files of Bootstrap
+* Change site_url() or get_site_url() to home_url()
+* Update the FontAwesome to v5.15.1 https://wordpress.org/support/topic/update-font-awsome/
+* Change the <main> tag to <div> tag to prevent issues from HTML Validator https://wordpress.org/support/topic/validation-error-main-element-and-section-element/
+* Address the issue with regard to navwalker https://wordpress.org/support/topic/version-3-3-3-breaks-wpml-language-switcher/
+
+= 3.3.3 - March 02, 2020 =
+* Update the wp_bootstrap_navwalker to v4.3.0
+* /inc/wp_bootstrap_navwalker.php
+* /functions.php, change the Popper JsDelivr to https://cdn.jsdelivr.net/npm/popper.js@1/dist/umd/popper.min.js
+* /inc/assets/js/popper.js
+* /inc/assets/js/popper.js.map
+* /inc/assets/js/popper.min.js
+* /inc/assets/js/popper.min.js.map
+* Update woocommerce cart template to 3.8.0
 
 = 3.3.2 - October 08, 2019 =
 * Update the CDN feature on the theme customizer

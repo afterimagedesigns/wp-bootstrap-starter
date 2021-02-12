@@ -61,7 +61,7 @@ jQuery( function ( $ ) {
         });
     }
     fullWidthSection();
-    $( window ).resize(function() {
+    $( window ).on("resize", function() {
         fullWidthSection();
     });
 
