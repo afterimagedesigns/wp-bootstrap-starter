@@ -7,7 +7,7 @@ get_header();
 get_sidebar();
 ?>
     <section id="primary" class="content-area col-sm-12 col-lg-8">
-        <main id="main" class="site-main" role="main">
+        <div id="main" class="site-main" role="main">
 
             <?php
             while ( have_posts() ) : the_post();
@@ -21,7 +21,7 @@ get_sidebar();
             endwhile; // End of the loop.
             ?>
 
-        </main><!-- #main -->
+        </div><!-- #main -->
     </section><!-- #primary -->
 
 <?php

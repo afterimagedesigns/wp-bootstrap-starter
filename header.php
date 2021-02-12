@@ -20,6 +20,18 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+<?php 
+
+    // WordPress 5.2 wp_body_open implementation
+    if ( function_exists( 'wp_body_open' ) ) {
+        wp_body_open();
+    } else {
+        do_action( 'wp_body_open' );
+    }
+
+?>
+
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wp-bootstrap-starter' ); ?></a>
     <?php if(!is_page_template( 'blank-page.php' ) && !is_page_template( 'blank-page-with-container.php' )): ?>
@@ -63,7 +75,7 @@
                 <h1>
                     <?php
                     if(get_theme_mod( 'header_banner_title_setting' )){
-                        echo get_theme_mod( 'header_banner_title_setting' );
+                        echo esc_attr( get_theme_mod( 'header_banner_title_setting' ) );
                     }else{
                         echo 'WordPress + Bootstrap';
                     }
@@ -72,7 +84,7 @@
                 <p>
                     <?php
                     if(get_theme_mod( 'header_banner_tagline_setting' )){
-                        echo get_theme_mod( 'header_banner_tagline_setting' );
+                        echo esc_attr( get_theme_mod( 'header_banner_tagline_setting' ) );
                 }else{
                         echo esc_html__('To customize the contents of this header banner and other elements of your site, go to Dashboard > Appearance > Customize','wp-bootstrap-starter');
                     }

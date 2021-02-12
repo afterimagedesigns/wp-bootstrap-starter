@@ -114,7 +114,7 @@ function wp_bootstrap_starter_bg_class() {
     }
 }
 
-function is_theme_preset_active() {
+function wp_bootstrap_starter_is_theme_preset_active() {
     if(get_theme_mod( 'theme_option_setting' ) && get_theme_mod( 'theme_option_setting' ) !== 'default'){
         return true;
     }

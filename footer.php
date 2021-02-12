@@ -18,9 +18,30 @@
 	<footer id="colophon" class="site-footer <?php echo wp_bootstrap_starter_bg_class(); ?>" role="contentinfo">
 		<div class="container pt-3 pb-3">
             <div class="site-info">
-                &copy; <?php echo date('Y'); ?> <?php echo '<a href="'.home_url().'">'.get_bloginfo('name').'</a>'; ?>
-                <span class="sep"> | </span>
-                <a class="credits" href="https://afterimagedesigns.com/wp-bootstrap-starter/" target="_blank" title="WordPress Technical Support" alt="Bootstrap WordPress Theme"><?php echo esc_html__('Bootstrap WordPress Theme','wp-bootstrap-starter'); ?></a>
+            	<?php 
+            	
+            		if ( get_theme_mod( 'bottom_footer_setting' ) ) {
+
+            			$allowed_html = [
+						    'a'      => [
+						        'href'  => [],
+						        'title' => [],
+						    ],
+						    'br'     => [],
+						    'em'     => [],
+						    'strong' => [],
+						];
+            			
+            			echo wp_kses( get_theme_mod( 'bottom_footer_setting' ), $allowed_html ); 
+
+            		} else {
+
+            	?>
+	                &copy; <?php echo date('Y'); ?> <a href="<?php echo esc_url( home_url() ); ?>"><?php printf( esc_html( '%s', 'wp-bootstrap-starter' ), get_bloginfo ( 'name' ) ); ?></a>
+	                <span class="sep"> | </span>
+	                <a class="credits" href="https://afterimagedesigns.com/wp-bootstrap-starter/" target="_blank" title="WordPress Technical Support" alt="Bootstrap WordPress Theme"><?php echo esc_html__('Bootstrap WordPress Theme','wp-bootstrap-starter'); ?></a>
+
+	            <?php } ?>
 
             </div><!-- close .site-info -->
 		</div>
